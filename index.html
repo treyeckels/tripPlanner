@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Extending Bootstrap</title>
+</head>
+
+<body>
+  <section id="landingScreen">
+    <div class="container">
+      <div class="row text-align-center">
+        <div class="col-12">
+            <h1>Welcome to TripPlanner</h1>
+            <button class="mt-3 mb-3 btn btn-primary" id="getStarted">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tripPlanningScreen" class="hide">
+    <div class="container">
+        <div class="row text-align-center">
+            <div class="col-12">
+                <h2>Select a destination, then select a time</h2>
+            </div>
+        </div>
+        <div class="text-align-center">
+            <form class="mt-3 mb-3">
+                <select id="destinationSelect"><option value="" selected>Select a destination</option></select>
+            </form>
+            <main>
+                <h3 class="destination"></h3>
+                <p><strong>Airline</strong>: <span id="airline"></span></p>
+                <p><strong>Destination</strong>: <span class="destination"></span></p>
+                <div class="mt-3 mb-3">
+                    <h4>Choose a day:</h4>
+                    <form id="dayRadiosForm" class="form">
+                        <div id="radios">
+                        </div>    
+                        <div class="mt-3 mb-3">
+                            <button class="btn btn-primary" id="bookFlight">Select Flight</button>
+                        </div>
+                    </form>
+                </div>  
+            </main>
+            </div>
+        </div>
+    </section>
+    <section id="thankYouScreen" class="hide">
+        <div class="row text-align-center">
+            <div class="col-12">
+                <h2>Thanks for using TripPlanner!</h2>
+                <p>You are traveling to <span id="thankYouTravelingTo"></span> on <span id="thankYouTravelingDay"></span></p>
+                <div>
+                    <button class="btn btn-primary" id="startOver">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/script.js"></script>
+
+</html>
